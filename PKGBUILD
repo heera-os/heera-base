@@ -3,12 +3,14 @@
 pkgname=heera-base
 pkgver=2021.07.23
 pkgrel=3
-pkgdesc='Base heera OS filesystem'
+pkgdesc='Heera OS base and filesystem'
 arch=('x86_64')
 license=('GPL')
 url='https://github.com/heera-os/heera-base.git'
-depends=('iana-etc')
-provides=('filesystem')
+depends=('iana-etc' 'gcc-libs' 'glibc' 'bash'  'coreutils' 'file' 'findutils' 'gawk' 'grep'
+'procps-ng' 'sed' 'tar'  'gettext' 'pciutils' 'psmisc' 'shadow' 'util-linux' 'bzip2' 'gzip' 'xz'
+'licenses' 'pacman' 'systemd' 'systemd-sysvcompat' 'iputils' 'iproute2')
+provides=('filesystem=2021.05.31-1')
 conflicts=('filesystem')
 backup=('etc/crypttab' 'etc/fstab' 'etc/group' 'etc/gshadow' 'etc/host.conf'
         'etc/hosts' 'etc/issue' 'etc/ld.so.conf' 'etc/motd' 'etc/nsswitch.conf'
